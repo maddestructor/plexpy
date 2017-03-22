@@ -33,6 +33,15 @@ def bool_int(value):
             value = 0
     return int(bool(value))
 
+ON_HEROKU = os.environ.get('ON_HEROKU')
+
+if ON_HEROKU:
+    # get the heroku port
+    port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
+else:
+    port = 3000
+    
+
 FILENAME = "config.ini"
 
 _CONFIG_DEFINITIONS = {
@@ -213,7 +222,7 @@ _CONFIG_DEFINITIONS = {
     'HTTP_HASHED_PASSWORD': (int, 'General', 0),
     'HTTP_HOST': (str, 'General', '0.0.0.0'),
     'HTTP_PASSWORD': (str, 'General', ''),
-    'HTTP_PORT': (int, 'General', 17995),
+    'HTTP_PORT': (int, 'General', port),
     'HTTP_PROXY': (int, 'General', 0),
     'HTTP_ROOT': (str, 'General', ''),
     'HTTP_USERNAME': (str, 'General', ''),
