@@ -213,7 +213,7 @@ _CONFIG_DEFINITIONS = {
     'HTTP_HASHED_PASSWORD': (int, 'General', 0),
     'HTTP_HOST': (str, 'General', '0.0.0.0'),
     'HTTP_PASSWORD': (str, 'General', ''),
-    'HTTP_PORT': (int, 'General', 8181),
+    'HTTP_PORT': (int, 'General', 17995),
     'HTTP_PROXY': (int, 'General', 0),
     'HTTP_ROOT': (str, 'General', ''),
     'HTTP_USERNAME': (str, 'General', ''),
